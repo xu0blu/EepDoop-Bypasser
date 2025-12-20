@@ -44,10 +44,18 @@ for _, Player in pairs(l_Players_0:GetPlayers()) do
 end;
 
 function Loader()
-	SEWings.Parent = CopyedWingsAssets;
-	WingsController.Parent = CopyedWingsAssets;
-	WingsSpawner.Parent = CopyedWingsAssets;
-	FlyingVfx.Parent = CopyedWingsAssets;
+	if SEWings then
+		SEWings.Parent = CopyedWingsAssets;
+	end;
+	if WingsController then
+		WingsController.Parent = CopyedWingsAssets;
+	end;
+	if WingsSpawner then
+		WingsSpawner.Parent = CopyedWingsAssets;
+	end;
+	if FlyingVfx then
+		FlyingVfx.Parent = CopyedWingsAssets;
+	end;
 end;
 
 Loader()
