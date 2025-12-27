@@ -3344,7 +3344,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 													and instance:IsA("Script")
 													and instance.RunContext ~= Enum.RunContext.Client
 											then
-												value = "-- [[ \nReason : Server-Script can not be decompile \nCode : 403 ]] --" -- TODO: Could be not just server scripts in the future
+												value = "--[[ \nReason : Server-Script can not be decompile \nCode : 403 \n]]--" -- TODO: Could be not just server scripts in the future
 											else
 												value = ldecompile(instance)
 												if SaveBytecode then
@@ -3356,7 +3356,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 											end
 										end
 
-										value = "Decompiled by blu's decompiler .gg/H6Zg37Ew (Join For Decompiled Files)"
+										value = "-- Decompiled by blu's decompiler .gg/H6Zg37Ew (Join For Decompiled Files)\n"
 											.. (hasLinkedSource and "-- Original Source: https://assetdelivery.roblox.com/v1/asset/?" .. (LinkedSource_type or "id") .. "=" .. (LinkedSource or LinkedSource_Url) .. "\n\n" or "")
 											.. value
 									end
