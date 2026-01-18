@@ -3794,6 +3794,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 		StatusText = Instance.new("TextLabel")
 
 		StatusText.Text = "Saving..."
+		syn.protect_gui(StatusGui);
 
 		StatusText.BackgroundTransparency = 1
 		StatusText.Font = Enum.Font.Code
